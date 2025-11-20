@@ -204,17 +204,3 @@ pnpm add -D @playwright/test
 - Status-based interaction rules
 - Price calculation
 
-## Browser Support
-
-- Chrome/Edge 90+
-- Firefox 88+
-- Safari 14+
-- Mobile browsers (iOS Safari, Chrome Android)
-
-## License
-
-MIT
-
-## Contributing
-
-This is a take-home assignment project. Not accepting contributions at this time.
