@@ -62,7 +62,7 @@ pnpm preview
 ```
 App.tsx                    # Main container, orchestrates data flow
 ├── SeatingMap.tsx         # SVG container, renders all seats
-│   └── Seat.tsx          # Individual seat circle with interactions
+│   └── Seat.tsx          # Individual seat with interactions
 ├── SeatDetails.tsx        # Shows focused seat information
 └── SelectionSummary.tsx   # Lists selected seats + subtotal
 ```
@@ -156,51 +156,5 @@ Venue data is loaded from `public/venue.json`:
 - `React.memo` prevents unnecessary seat re-renders
 - `useMemo` for derived state (selected seat details)
 
-**For 15k+ Seats (Future Optimization):**
-- Implement viewport culling (only render visible seats)
-- Use `react-window` or custom virtualization
-- Consider Canvas rendering with accessibility overlay
-- Debounce pan/zoom updates
 
-## Missing Features / TODOs
-
-### High Priority
-- [ ] Viewport culling for 15k+ seat performance
-- [ ] Pan and zoom controls for large venues
-- [ ] Mobile touch gestures (pinch-zoom)
-- [ ] Loading states and error boundaries
-
-### Medium Priority
-- [ ] Heat map view (color by price tier)
-- [ ] "Find N adjacent seats" helper
-- [ ] Seat hover tooltips
-- [ ] Undo/redo selection
-
-### Low Priority / Stretch Goals
-- [ ] WebSocket real-time seat status updates
-- [ ] Animated seat status transitions
-- [ ] Dark mode with WCAG AA contrast
-- [ ] Multi-section venue support with transforms
-- [ ] Export selection as PDF/email
-
-## Testing
-
-**Current Status:** No tests implemented yet.
-
-**Recommended Testing Strategy:**
-
-```bash
-# Unit tests (Vitest)
-pnpm add -D vitest @testing-library/react @testing-library/user-event
-
-# E2E tests (Playwright)
-pnpm add -D @playwright/test
-```
-
-**Test Coverage Needed:**
-- Seat selection logic (max 8 seats)
-- localStorage persistence
-- Keyboard navigation
-- Status-based interaction rules
-- Price calculation
 
